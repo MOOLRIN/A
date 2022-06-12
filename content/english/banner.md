@@ -12,6 +12,8 @@ last_name: MOOOOL
 occupations:
 - 사진가 Photographer
 slider_images:
-- images/slider/full-nav-bg.jpg
+- images/slider/R1280x0-1.jpeg
+- images/slider/R1280x0-2.jpeg
+- images/slider/R1280x0-3.jpeg
 title: MOOOOL 물
 ---
