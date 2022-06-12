@@ -4,9 +4,6 @@
 {{ with .GetPage "banner" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
 <section class="header {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="home">
-  <div class="logo">
-    <img class="img-fluid" src="{{ site.Params.logo_light | relURL }}" alt="{{ site.Title }}">
-  </div>
   <div class="slider-prev-button slider-button">
     <i class="fa fa-angle-left"></i>
   </div>
@@ -97,27 +94,6 @@
         </li>
         {{ end }}
       </ul>
-      <!-- Language List -->
-      {{- if .IsTranslated }}
-      <select id="select-language" onchange="location = this.value;">
-        {{ $siteLanguages := site.Languages}}
-        {{ $pageLang := .Page.Lang}}
-        {{ range .Page.AllTranslations }}
-        {{ $translation := .}}
-        {{ range $siteLanguages }}
-        {{ if eq $translation.Lang .Lang }}
-        {{ $selected := false }}
-        {{ if eq $pageLang .Lang}}
-        <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
-        </option>
-        {{ else }}
-        <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
-        {{ end }}
-        {{ end }}
-        {{ end }}
-        {{ end }}
-      </select>
-      {{ end }}
       <!-- /desktop-menu -->
 
       <!-- mobile-menu -->
@@ -187,7 +163,7 @@
           <div class="content">{{ .Content | markdownify | emojify }}</div>
           {{ with .Params.button }}
           {{ if .enable }}
-          <a href="{{ .link | absURL }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
+          <a href="{{ .link | absURL }}" class="download-cv"> {{ .label }} </a>
           {{ end }}
           {{ end }}
         </div>
@@ -199,97 +175,11 @@
       {{ end }}
     </div>
 
-    <div class="row experience-skill">
-      {{ with .Params.experience }}
-      {{ if .enable }}
-      <div class="col-lg-6 col-sm-6 col-11 experience wow fadeInUp" data-wow-duration="1.5s">
-        <h3>{{ .title }}</h3>
-        <ul class="experience-chart">
-          {{ range .experience_list }}
-          <li>
-            <div class="single-experience">
-              <h4>{{ .name | markdownify }}</h4>
-              {{ with .company }} <span>{{ . | markdownify }}</span> {{ end }}
-              {{ with .duration }} <span>{{ . | markdownify }}</span> {{ end }}
-              {{ with .content }} <p>{{ . | markdownify}}</p> {{ end }}
-            </div>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-      {{ end }}
-
-      {{ with .Params.skill }}
-      {{ if .enable }}
-      <div class="col-lg-6 col-sm-6 col-11 skill wow fadeInUp" data-wow-duration="1.5s">
-        <h3>{{ .title }}</h3>
-        <div class="skill-progress-bar">
-          {{ range .skill_list }}
-          <div class="clearfix">
-            <span class="skillbar-title">{{ .name }}</span>
-            <span class="skill-bar-percent">{{ .percentage }}</span>
-            <div class="skillbar" data-percent="{{ .percentage }}">
-              <div class="skillbar-bar"></div>
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
-      {{ end }}
     </div>
   </div>
 </section>
 {{ end }}
 <!-- End About Me -->
-
-<!-- Start Services -->
-{{ with .GetPage "service" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="services {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="service">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto col-sm-10">
-        <div class="wow fadeInUp" data-wow-duration="1.5s">
-          <div class="services-heading">
-            <div class="bar"></div>
-            <h1>{{ .Title | markdownify }}</h1>
-          </div>
-          <div class="row">
-            {{ range .Params.service_list }}
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name | markdownify }}">
-              </div>
-              <div class="service-label">{{ .name | markdownify }}</div>
-            </div>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- End Services -->
-
-<!-- call to action -->
-{{ with .GetPage "call-to-action" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section id="cta" class="need-service overlay section-sm wow fadeInUp {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} data-wow-duration="1.5s" style="background-image: url('{{ .Params.bg_image | absURL }}');">
-  <div class="container position-relative z-index-9">
-    <h1>{{ .Title | markdownify }}</h1>
-    {{ with .Content }}<div class="text-white content">{{ . | markdownify }}</div> {{ end }}
-    {{ with .Params.button }}
-    {{ if .enable }}
-    <a href="{{ .link | absURL}}">{{ .label }}</a>
-    {{ end }}
-    {{ end }}
-  </div>
-</section>
-{{ end }}
-<!-- end call to action -->
 
 <!-- Start Portfolio -->
 {{ with .GetPage "portfolio"}}
@@ -350,32 +240,6 @@
 {{ end }}
 <!-- End Portfolio -->
 
-<!-- Start Testimonials -->
-{{ with .GetPage "testimonial"}}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
-  <div class="container">
-    <div class="row">
-      <div class="testimonials-container col-lg-8 offset-lg-2">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
-        <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="1.5s">
-          {{ range .Params.testimonial_slider }}
-          <div class="single-testimonial">
-            <div class="testimonial-holder">
-              <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
-              <h2>{{ .name }}</h2>
-              <span>{{ .designation | markdownify }}</span>
-              <p><i class="fa fa-quote-left"></i> {{ .content | markdownify }} <i class="fa fa-quote-right"></i></p>
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- End Testimonials -->
 
 <!-- funfacts -->
 {{ with .GetPage "funfacts"}}
@@ -401,58 +265,6 @@
 </section>
 {{ end }}
 <!-- end funfacts -->
-
-<!-- Start Contact -->
-{{ with .GetPage "contact"}}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="contact {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} style="background-image: url('{{.Params.bg_image | absURL}}');" id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="contact-holder col-lg-8 offset-lg-2 col-sm-8 offset-sm-2">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify}}</h1>
-        <form method="POST" action="{{ .Params.form_action }}" data-toggle="validator">
-          <div class="form-container row wow fadeInUp" data-wow-duration="1.5s">
-            <div class="form-group col-lg-6">
-              <input class="form-control" type="text" name="username" id="username" placeholder="{{.Params.name}}"
-                required>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group col-lg-6">
-              <input class="form-control" type="email" id="email" name="email" placeholder="{{.Params.email}}" required>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group col-lg-12">
-              <textarea class="form-control" name="message" id="message" rows="12"
-                placeholder="{{.Params.message}}"></textarea>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group col-lg-12 sub-button">
-              <button class="submit form-control hvr-icon-push" type="submit" value="send"> {{.Params.submit}} </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <div class="footer col-lg-10 offset-lg-1">
-        <hr>
-        <ul class="footer-icons list-inline">
-          {{ range site.Params.social }}
-          <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
-          {{ end }}
-        </ul>
-        <div class="to-top">
-          <a href="#home"><i class="fa fa-chevron-up"></i></a>
-        </div>
-        <div class="credit content">
-          {{ site.Params.copyright | markdownify }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- End Contact -->
 
 <a href="#home" class="scroll-up hvr-icon-up"></a>
 

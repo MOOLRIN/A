@@ -1,21 +1,17 @@
 ---
-bg_image: images/backgrounds/full-nav-bg.jpg
+bg_image: images/backgrounds/20220208-KNTM400-91830030-ZI-35BG.JPG
 button:
   enable: true
-  label: HIRE ME
-  link: '#contact'
+  label: 최근 하고 있는 작업
+  link: 'https://instagram.com/studio_mooool'
 custom_attributes: ""
 custom_class: ""
 custom_css: ""
-first_name: MacGyver
-last_name: SOMRAT
+first_name: DOGYUN KIM
+last_name: MOOOOL
 occupations:
-- Web Developer
-- Graphic Designer
-- Database Manager
+- 사진가 Photographer
 slider_images:
-- images/slider/slider-1.jpg
-- images/slider/slider-2.jpg
-- images/slider/slider-3.jpg
-title: I'm Somrat Sorkar
+- images/slider/full-nav-bg.jpg
+title: MOOOOL 물
 ---

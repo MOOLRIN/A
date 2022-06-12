@@ -13,12 +13,12 @@ markup:
     renderer:
       unsafe: yes
 params:
-  author: somrat
-  description: This is meta description
-  favicon: images/favicon.png
-  logo_dark: images/logo-dark.png
-  logo_light: images/logo.png
-  logo_width: 150px
+  author: MOOLRIN
+  description: sajinman
+  favicon: images/favicon_mooool.png
+  logo_dark: images/logo_blank.png
+  logo_light: images/logo_blank.png
+  logo_width: 0px
   plugins:
     css:
       - link: plugins/bootstrap/bootstrap.min.css
@@ -38,20 +38,14 @@ params:
       - link: plugins/shuffle/shuffle.min.js
       - link: plugins/magnific-popup/jquery.magnific-popup.min.js
       - link: plugins/owl-carousel/owl.carousel.min.js
-  preloader:
-    enable: yes
-    preloader: images/preloader.gif
   social:
-    - icon: fab fa-facebook-f
-      link: https://www.facebook.com/somratpro
+    - icon: fab fa-tree
+      link: https://www.linktr.ee/moolrin
     - icon: fab fa-twitter
-      link: https://twitter.com/somratpro
+      link: https://twitter.com/MOOLRIN
     - icon: fab fa-instagram
-      link: https://www.instagram.com/somratpro
-    - icon: fab fa-github
-      link: https://github.com/somratpro
-    - icon: fab fa-linkedin
-      link: https://www.linkedin.com/in/somratpro
+      link: https://www.instagram.com/MOOLRIN
+
 Languages:
   en:
     contentDir: content/english
@@ -68,55 +62,8 @@ Languages:
           pre: '#'
           url: about
           weight: 2
-        - name: Service
-          pre: '#'
-          url: service
-          weight: 3
         - name: Portfolio
           pre: '#'
           url: portfolio
-          weight: 4
-        - name: Testimonial
-          pre: '#'
-          url: testimonial
-          weight: 5
-        - name: Contact
-          pre: '#'
-          url: contact
-          weight: 6
-        - name: Blog
-          url: blog
-          weight: 7
-    weight: 1
-  fr:
-    contentDir: content/french
-    copyright: Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)
-    home: Accueil
-    languageCode: fr-fr
-    languageName: Fr
-    menu:
-      main:
-        - name: Home
-          url: /
-          weight: 1
-        - name: About me
-          pre: '#'
-          url: about
-          weight: 2
-        - name: Service
-          pre: '#'
-          url: service
           weight: 3
-        - name: Portfolio
-          pre: '#'
-          url: portfolio
-          weight: 4
-        - name: Testimonial
-          pre: '#'
-          url: testimonial
-          weight: 5
-        - name: Contact
-          pre: '#'
-          url: contact
-          weight: 6
-    weight: 2
+    weight: 1s

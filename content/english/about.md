@@ -1,44 +1,48 @@
 ---
 button:
   enable: true
-  label: DOWNLOAD MY CV
-  link: '#'
+  label: 공연사진 아카이브
+  link: 'https://flickr.com/moolrinphoto/albums/'
 custom_attributes: ""
 custom_class: ""
 custom_css: ""
-experience:
-  enable: true
-  experience_list:
-  - company: Fiverr.com
-    content: I work with HTML, CSS, and Javascript to create websites and web applications
-      like Personal, Business, Blog, E-comerches etc.
-    duration: 2016-2018
-    name: Web Developer
-  - company: Fiverr.com
-    content: Graphic design is art with a purpose. I love illustration, so logo desing
-      is my favorite work. But i can do many things with graphics.
-    duration: 2015-2018
-    name: Graphic Designer
-  - company: Polytechnic
-    content: Database management is among the fundamental processes in the software
-      field of computing. I know MS Access very well.
-    duration: 2014-2018
-    name: Database Manager
-  title: EXPERIENCE
-image: images/backgrounds/portrait.jpg
-skill:
-  enable: true
-  skill_list:
-  - name: Web Development
-    percentage: 98%
-  - name: Graphic Design
-    percentage: 85%
-  - name: Database Management
-    percentage: 90%
-  - name: Wordpress
-    percentage: 70%
-  title: SKILL
-title: KNOW MORE <br> ABOUT ME
+image: images/backgrounds/20210128-_MLN3852-ILCE-7RM3-5304 x 6630.JPG
+
+title: 소개
 ---
 
-It's Somrat, Professional Web Developer. I love to write code, it's my passoin. I am here to help you, i am here to design your web page. i can help you to describe yourself in the best way.<br>No matter how difficult your web page is, i will find an easy way and complete your work anyway. Stay connect with me........😊
+프리랜서 사진맨. 010-8970-4649. 
+
+촬영 의뢰와 외주, 언제든 맡겨주세요! 
+<br>
+🦝
+<br>
+<br>
+공연 촬영 이력서 / Music Photography Resume
+
+[공연 및 행사 촬영]
+
+‘2021 빅데이 사우스’ (Big Day South 2021) 공식 촬영
+<br>
+권나무 3집 ‘새로운 날’ (NEW DAY) 대구 쇼케이스 촬영
+<br>
+전유동 1집 ‘관찰자로서의 숲’ 서울, 대구 쇼케이스 촬영
+<br>
+빅나인고고클럽 ‘서울상륙대작전’ 메인 포토그래퍼
+<br>
+드링킹소년소녀합창단 전국투어 ‘OK, 2019 BYE’ 대구공연 촬영
+<br>
+공연 ‘기타-팝-제너레이션’ 사진 촬영
+<br>
+2019 서울인디뮤직페스타 대구서울부산교류전 촬영 기록
+<br>
+공연 ‘한결같은 마음’ vol.5 - 시와 & 오늘도 무사히 촬영
+<br>
+탐쓴, 반다오이, 심상명, 문재영 등 대구 지역 아티스트 앨범 발매 공연 촬영
+
+
+[참여 도서 및 행사]
+
+‘빅나인 2019’ - 대구인디덕질보고서
+<br>
+'2018 대구독립문화예술제' 전시 참여
