@@ -2,7 +2,7 @@
 bg_image: images/backgrounds/20220208-KNTM400-91830030-ZI-35BG.JPG
 button:
   enable: true
-  label: 최근 하고 있는 작업
+  label: 최근 작업
   link: 'https://instagram.com/studio_mooool'
 custom_attributes: ""
 custom_class: ""

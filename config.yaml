@@ -39,12 +39,15 @@ params:
       - link: plugins/magnific-popup/jquery.magnific-popup.min.js
       - link: plugins/owl-carousel/owl.carousel.min.js
   social:
-    - icon: fab fa-tree
+    - icon: fab fa-link
       link: https://www.linktr.ee/moolrin
     - icon: fab fa-twitter
       link: https://twitter.com/MOOLRIN
     - icon: fab fa-instagram
       link: https://www.instagram.com/MOOLRIN
+    - icon: fab fa-flickr
+      link: https://www.flickr.com/photos/moolrinphoto/albums
+
 
 Languages:
   en:
@@ -58,7 +61,7 @@ Languages:
         - name: Home
           url: /
           weight: 1
-        - name: About me
+        - name: About
           pre: '#'
           url: about
           weight: 2
